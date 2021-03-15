@@ -55,7 +55,7 @@ elif nav == 'Offers':
             c1, c2, c3, c4, c5 = st.beta_columns([2,1,2,1,1])
             c1.write(offer['merchant']['name'])
             c2.write(offer['fee'])
-            c3.write(offer['due'])
+            c3.write(offer['due'][:10])
             with c4.beta_expander(translate['Pick']):
                 st.date_input('date of Ad', key=offer)
                 st.time_input('time of Ad', key=offer)
